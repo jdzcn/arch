@@ -118,7 +118,12 @@
 
 	Client:
 	vinagre
-22.openbox常用设置
+
+22.挂载NTFS分区
+	
+	UUID=44B0C989B0C98242	/home/sb/sda1	ntfs-3g	defaults	0	0
+
+23.openbox常用设置
 
 	$ mkdir -p ~/.config/openbox
 	$ cp /etc/xdg/openbox/{rc.xml,menu.xml,autostart,environment} ~/.config/openbox
