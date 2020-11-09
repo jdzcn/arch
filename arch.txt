@@ -52,10 +52,18 @@
 	lspci | grep -e VGA -e 3D
 	pacman -Ss xf86-video
 	pacman -S xf86-video-intel(sample)
-	pacman -S xorg-server xorg-xinit openbox dmenu wqy-microhei xterm leafpad pcmanfm firefox trojan tint2 volumeicon
+	pacman -S xorg-server xorg-xinit openbox dmenu wqy-microhei xterm leafpad pcmanfm git firefox trojan tint2 volumeicon
+
+	git clone https://github.com/jdzcn/arch	
+
 	cp /etc/X11/xinit/xinitrc ~/.xinitrc
 	nano ~/.xinitrc
 	exec openbox-session
+	
+	cd ~/.config
+	git clone https://github.com/jdzcn/openbox
+	
+	reboot
 14.设置声卡
 	pacman -S alsa-utils
 	常用命令：alsamixer,amixer sset Master unmute,aplay -l,amixer scontrols
