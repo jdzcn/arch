@@ -52,7 +52,7 @@
 	lspci | grep -e VGA -e 3D
 	pacman -Ss xf86-video
 	pacman -S xf86-video-intel(sample)
-	pacman -S xorg-server xorg-xinit openbox dmenu wqy-microhei rxvt-unicode tint2 volumeicon
+	pacman -S xorg-server xorg-xinit openbox dmenu wqy-microhei xterm leafpad pcmanfm firefox trojan tint2 volumeicon
 	cp /etc/X11/xinit/xinitrc ~/.xinitrc
 	nano ~/.xinitrc
 	exec openbox-session
@@ -82,7 +82,7 @@
 	In configtool,add "wubi" and "sunpinyin"
 	
 17.常用软件
-	pacman -S firefox pcmanfm leafpad file-roller trojan qpdfview mpv gpicview netease-cloud-music qq-linux veracrypt
+	pacman -S file-roller qpdfview vlc gpicview netease-cloud-music qq-linux veracrypt
 
 	代理运行chromium
 	chromium --proxy-server="socks5://127.0.0.1:1080"
