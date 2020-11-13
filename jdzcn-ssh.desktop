@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=jdzcn.xyz(ssh)
+Comment=ssh jdzcn.xyz
+Exec=ssh root@jdzcn.xyz
+
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=System;TerminalEmulator;
