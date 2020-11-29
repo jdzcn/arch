@@ -1,0 +1,54 @@
+﻿官方Trojan 脚本配置指南
+
+35.236.142.101
+本文参考https://youtu.be/zQX5SyUmPjs
+
+一.创建 Google Computer Engine并修改ssh登陆：
+	
+	sudo -i 					#切换root权限
+
+	vi /etc/ssh/sshd_config		#修改ssh配置文件
+
+		PermitRootLogin yes
+		PasswordAuthentication yes
+
+	service sshd restart		#重启ssh服务
+
+	passwd root 				#修改root密码
+
+	尝试用ssh软件登陆
+
+二.namesilo.com申请域名并修改解析(DNS RECORDs)到Google vps
+
+
+三.freessl.cn申请证书（包括为域名添加txt记录)
+
+
+四.执行Trojan官方一键脚本
+
+	sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
+
+五.配置/usr/local/etc/trojan/config.json
+
+	添加密码，证书路径等启动trojan服务
+	systemctl start/restart/enable trojan
+六.安装bbr加速
+
+	wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"
+chmod +x tcp.sh
+./tcp.sh
+
+apt install apache2 
+
+apt install mariadb-server
+# mysql_secure_installation
+$ mysql -u root -p
+
+MariaDB> CREATE USER 'song'@'localhost' IDENTIFIED BY '123456';
+MariaDB> GRANT ALL PRIVILEGES ON *.* TO 'song'@'localhost';
+MariaDB> FLUSH PRIVILEGES;
+MariaDB> create database myshop;
+
+#mysql -uroot -psongbin myshop<*.sql
+
+# apt install php libapache2-mod-php php-mysql
