@@ -54,8 +54,11 @@
 	pacman -S xf86-video-intel(sample)
 	pacman -S xorg-server xorg-xinit openbox dmenu wqy-microhei xterm leafpad pcmanfm git firefox trojan tint2 volumeicon
 
+	
 	git clone https://github.com/jdzcn/arch	
-
+	
+	apt install openbox xinit  xterm pcmanfm git tint2 fonts-wqy-microhei
+	
 	cp /etc/X11/xinit/xinitrc ~/.xinitrc
 	nano ~/.xinitrc
 	exec openbox-session
