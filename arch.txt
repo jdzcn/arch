@@ -84,6 +84,7 @@
 16.输入法
 	pacman -S fcitx fcitx-im fcitx-configtool fcitx-table-extra fcitx-sunpinyin fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5
 	
+	apt install ibus ibus-pinyin ibus-gtk ibus-qt4
 	sudo nano ~/.xinitrc
 
 	export GTK_IM_MODULE=fcitx
@@ -133,7 +134,10 @@
 
 	autostart文件：
 	pcmanfm --desktop &
-	tint2&amp;
+	tint2 &
+	
+	#debian
+	#volti &
 	
 	# Volume
 	if which volumeicon >/dev/null 2>&1; then
@@ -141,7 +145,7 @@
 	fi
 
 	#feh --bg-scale ~/Downloads/dp.jpg
-	fcitx&amp;
+	fcitx &
 	#conky&amp;
 
 	rc.xml文件：
