@@ -15,8 +15,32 @@
 5.切换系统root
 	arch-chroot /mnt
 6.安装网络
-	pacman -S nano dhcpcd 
-	systemctl enable dhcpcd.service
+	#pacman -S nano dhcpcd 
+	#systemctl enable dhcpcd.service
+	使用 DHCP 的有线适配器
+
+	/etc/systemd/network/20-wired.network
+
+	[Match]
+	Name=enp1s0
+
+	[Network]
+	DHCP=ipv4
+
+	使用静态 IP 的有线适配器
+
+	/etc/systemd/network/20-wired.network
+
+	[Match]
+	Name=enp1s0
+
+	[Network]
+	Address=10.1.10.9/24
+	Gateway=10.1.10.1
+	DNS=10.1.10.1
+	#DNS=8.8.8.8
+
+	systemctl start/enable systemd-networkd
 7.时区
 	ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 	hwclock --systohc
