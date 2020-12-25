@@ -1,3 +1,4 @@
+#archlinux dhcp client
 #cp 20-wired.network /etc/systemd/network
 
 [Match]
