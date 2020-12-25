@@ -1,0 +1,10 @@
+#cp 20-wired.network /etc/systemd/network
+
+[Match]
+Name=enp2s0
+
+[Network]
+Address=192.168.1.2
+Gateway=192.168.1.1
+DNS=192.168.1.1
+#DNS=8.8.8.8
